@@ -26,3 +26,30 @@ A responsive news website built using Html,Css,Js and NewsAPI that allows users 
 6. **Simple, Clean UI with Modern Design**:
     - The website uses a minimalistic, modern design with clean typography, well-organized content, and a color theme based on your style (including shades of blue).
     - The color palette includes a primary accent color for interactive elements and a soft color scheme for backgrounds and borders.
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://link-to-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Create a newsApi key from NewsApi website and copy it
+
+```bash
+  https://newsapi.org/
+```
+
+Now,Replace the Api key in the script.js file
+
+```bash
+  const API_KEY = "<Your Api key"";
+```
+
+Now run the website
