@@ -1,4 +1,4 @@
-# News_web
+# News_web Extension
 
 A responsive news website built using Html,Css,Js and NewsAPI that allows users to browse the latest headlines from different categories.
 
