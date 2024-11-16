@@ -1,52 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News App</title>
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body>
-    <nav>
-        <div class="main-nav container flex">
-            <a href="" class="company-logo">
-                <img src="./images/news_web.png" alt="logo">
-            </a>
-            <div class="search-bar flex">
-                <input type="text" class="news-input" id="search-text" placeholder="e.g. Science">
-                <button class="search-button" id="search-button">
-                    <span class="search-text">Search </span>
-                    <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <main>
-        <div class="loading" id="loading" style="display: none;">Loading...</div>
-        <div class="cards-container container flex" id="cardscontainer"></div>
-    </main>
-
-    <template id="template-news-card">
-        <div class="card">
-            <div class="card-header">
-                <img src="https://via.placeholder.com/400x200" alt="" id="news-img">
-                <span class="news-source-label" id="news-source-top">News Source</span>
-            </div>
-            <div class="card-content">
-                <h3 id="news-title"></h3>
-                <h6 class="news-source" id="news-source"></h6>
-                <p class="news-desc" id="news-desc"></p>
-            </div>
-        </div>
-    </template>
-
-    <script src="script.js" defer></script>
-</body>
-
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
