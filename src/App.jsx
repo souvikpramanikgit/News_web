@@ -6,11 +6,10 @@ const url = "https://newsapi.org/v2/everything?q=";
 
 function App() {
   const [loading, setLoading] = useState(false);
-  const [articles, setArticles] = useState([]); // Default to an empty array
+  const [articles, setArticles] = useState([]);
   const [query, setQuery] = useState(() => localStorage.getItem("query") || "Top news");
   const [searchInput, setSearchInput] = useState("");
 
-  // Fetch news when the component mounts and when the query changes
   useEffect(() => {
     fetchNews(query);
   }, [query]);
@@ -28,7 +27,7 @@ function App() {
     try {
       const res = await fetch(`${url}${searchQuery}&apiKey=${API_KEY}`);
       const data = await res.json();
-      setArticles(data.articles || []); // Ensure articles is always an array
+      setArticles(data.articles || []);
     } catch (error) {
       console.error("Error fetching data:", error);
     } finally {
@@ -39,9 +38,9 @@ function App() {
   const handleSearch = (event) => {
     if (event.key === "Enter" || event.type === "click") {
       if (!searchInput.trim()) {
-        return; // Prevent searching if input is blank
+        return;
       }
-      setQuery(searchInput); // Update query based on valid input
+      setQuery(searchInput);
     }
   };
 
@@ -78,7 +77,7 @@ function App() {
               articles.map((article, index) => {
                 // Defensive checks for missing properties
                 if (!article.url || !article.urlToImage || !article.title || !article.description) {
-                  return null; // Skip this article
+                  return null;
                 }
 
                 return (
